@@ -3,34 +3,50 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Simple Demo</title>
+    <title>App</title>
+    <link href="../../css/main.css" rel="stylesheet">
+
     <script src="../../js/react.min.js"></script>
     <script src="../../js/react-dom.min.js"></script>
     <script src="../../js/browser.min.js"></script> 
+    <style>
+
+    </style>
 </head>
 <body>
 
-    <div id="app"></div>
+    <div id="container"></div>
+
 
     <script type="text/babel">
-        var Movie = React.createClass({
+
+        
+        var Comment = React.createClass({
+
+            edit: function () {
+                alert("Editing comment");
+            },
+            remove: function () {
+                alert("Removing comment");
+            },
             render: function () {
                 return (
-                    <div>
-                        <h1>{this.props.title}</h1>
-                        <h2>{this.props.genre}</h2>
+                    <div className="commentContainer">  
+                        <div className="commentText">  {this.props.children} </div>
+                        <button onClick={this.edit} className="button-primary">Edit</button>
+                        <button onClick={this.remove} className="button-danger">Remove</button>
                     </div>
                 );
             }
         });
 
         ReactDOM.render(
-            <div>
-                < Movie title="Avatar" genre="action" />
-                < Movie title="Seven" genre="thriller" />
-                < Movie title="Pulp Fiction" genre="action" />
+            <div className="board">
+                <Comment>Hey</Comment>
+                <Comment>Hola</Comment>
+                <Comment>Ska</Comment>
             </div>
-            , document.getElementById("app"));
+            , document.getElementById("container"));
     
 
     </script>
