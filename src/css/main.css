@@ -17,3 +17,34 @@ html {
 .commentText {
 	margin-left: 20px;
 }
+
+.button-primary {
+  background: #3498db;
+  border-radius: 5px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  margin: 20px;
+}
+
+.button-primary:hover {
+  background: #3cb0fd;
+  text-decoration: none;
+}
+
+.button-danger {
+  background: #c42a2a;
+  border-radius: 5px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.button-danger:hover {
+  background: #d63234;
+  text-decoration: none;
+}
