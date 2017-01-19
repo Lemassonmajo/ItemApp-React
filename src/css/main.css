@@ -48,3 +48,18 @@ html {
   background: #d63234;
   text-decoration: none;
 }
+
+.button-success {
+  background: green;
+  border-radius: 5px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.button-danger:hover {
+  background: #d63234;
+  text-decoration: none;
+}
