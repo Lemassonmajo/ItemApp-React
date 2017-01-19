@@ -64,16 +64,36 @@
                     return this.renderNormal(); 
                 }
             }
-           
         });
 
-        ReactDOM.render(
-            <div className="board">
-                <Comment>Hey</Comment>
-                <Comment>Hola</Comment>
-                <Comment>Ska</Comment>
-            </div>
-            , document.getElementById("container"));
+        var Board = React.createClass({
+
+            getInitialState: function () {
+                return {
+                    comments: [
+                        "Hola",
+                        "Wasap",
+                        "Ready"
+                    ]
+                }        
+            },
+
+            render: function () {
+                return (
+                    <div className="board">
+                        {
+                            this.state.comments.map(function (text, i) {
+                                return (<Comment key={i}>{text}</Comment>);
+                            }) 
+                        }
+                    </div>
+                );
+            }
+
+        });
+
+
+        ReactDOM.render(<Board />, document.getElementById("container"));
     
 
     </script>
